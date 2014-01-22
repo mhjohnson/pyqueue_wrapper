@@ -11,7 +11,6 @@ import json
 import httplib
 from time import sleep
 
-from configobj import ConfigObj
 from iron_mq import IronMQ
 
 class Iron:

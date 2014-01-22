@@ -9,4 +9,5 @@ setup(name='pyqueue_wrapper',
       author_email='johnson.matthew.h@gmail.com',
       url='https://bitbucket.org/mhjohnson/pyqueue_wrapper/overview',
       packages=['pyqueue_wrapper'],
+      install_requires=['iron-core>=1.1.1', 'iron-mq>=0.5', 'boto>=2.8.0']
      )
