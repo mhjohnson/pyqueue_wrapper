@@ -8,5 +8,5 @@ setup(name='pyqueue_wrapper',
       author='Matthew H. Johnson, PharmD',
       author_email='johnson.matthew.h@gmail.com',
       url='https://bitbucket.org/mhjohnson/pyqueue_wrapper/overview',
-      packages=['__init__.py'],
+      packages=['pyqueue_wrapper'],
      )
