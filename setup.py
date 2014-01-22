@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='pyqueue_wrapper',
-      version='1.0',
+      version='1.0.1',
       description=' Wrapper for popular queues like Amazon SQS and iron.IO',
       author='Matthew H. Johnson, PharmD',
       author_email='johnson.matthew.h@gmail.com',
