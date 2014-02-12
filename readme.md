@@ -1,9 +1,9 @@
-# pyqueue_wrapper
+# pyqueue_wrapper documentation
 
 ## Summary
-Standardized queue wrapper for gevent, iron.IO and AWS.  
-Sometimes there is a need to use multiple queue services, but refactoring code is not an option.
-With pyqueue_wrapper, easily switch between the supported queue services.
+This a wrapper that standardizes queue services for gevent, iron.IO and AWS (more to come)  
+Sometimes there is a need to utilize multiple queue services, but refactoring code is not an option.
+With pyqueue_wrapper, one can easily switch between the supported queue services.
 
 ## Setup Instructions
 ###Install
@@ -35,13 +35,13 @@ Create configuration json file (example):
 ```
 **The name of the queue depends on two configuration variables**:
 
- 1. BASENAME - name of queue 
- 2. ENV_MODE - environment suffix used on naming of queue
+ 1. **BASENAME** - name of queue 
+ 2. **ENV_MODE** - environment suffix used on naming of queue
 
 In this example, the full name of the queue would become my_queue_dev
 
-**Be sure to sepcify the TYPE**  
-TYPE - the queue service to use (eg: 'sqs' for AWS SQS, 'ironio' for iron.io QS)
+**Be sure to specify the TYPE**  
+**TYPE** - the queue service to use (eg: 'sqs' for AWS SQS, 'ironio' for iron.io QS)
 
 ###Usage:
 ```python
