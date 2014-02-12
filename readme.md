@@ -2,12 +2,13 @@
 
 # **Summary**
 This a wrapper that standardizes queue services for:  
-* gevent
+
 * [ironMQ](http://www.iron.io/mq)
 * [AWS SQS](http://aws.amazon.com/sqs/)
 * more to come ...  
+
 Sometimes there is a need to utilize multiple queue services, but refactoring code is not an option.
-With pyqueue_wrapper, one can easily switch between the supported queue services.
+With pyqueue_wrapper, one can easily switch between the supported queue services with a configuration file.
 
 # **Setup Instructions**
 ## **Install:**
@@ -16,7 +17,7 @@ pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
 ```
 
 ## **Create json config file**
-### **Example:**
+### **Config Example:**
 ```javascript
 {
     "BASENAME": "my_queue",
@@ -25,8 +26,8 @@ pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
     "ironio": {
         "TOKEN": "xxxxxxxxx",
         "PROJECT_ID": "yyyyyyyyyy",
-        "MSG_EXPIRES": 1800,
-        "MSG_TIMEOUT": 8400
+        "MSG_EXPIRES": 1800, // seconds
+        "MSG_TIMEOUT": 8400 // seconds
     },
     "sqs": {
         "TYPE": "sqs",
@@ -38,13 +39,13 @@ pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
 }
 ```
 ### **Config File Details:**
-The name of the queue depends on two configuration variables:  
- 1. **BASENAME** - name of queue 
- 2. **ENV_MODE** - environment suffix used on naming of queue
+The *name* of the queue depends on *two* configuration variables:  
+  1. **BASENAME** - name of queue 
+  2. **ENV_MODE** - environment suffix used on naming of queue
 
-In this example, the full name of the queue would become my_queue_dev  
+In this example, the full name of the queue would become *my_queue_dev*  
 
-Be sure to specify the **TYPE**  
+Be sure to specify the *TYPE*:   
 **TYPE** - the queue service to use (eg: 'sqs' for AWS SQS, 'ironio' for iron.io QS)  
 
 ## **Example Usage:**
@@ -75,4 +76,4 @@ q.delete(qid) # Note: not required for AWS SQS, because auto deletes
 ## clear
 q.clear() # clear all messages in queue
 ```
-
+    
