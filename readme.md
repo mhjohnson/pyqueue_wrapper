@@ -14,26 +14,24 @@ pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
 ###Setup
 Create configuration json file (example):
 ```javascript
-	{
-               'BASENAME': 'my_queue',
-               'ENV_MODE': 'dev',
-               'TYPE': 'ironio',
-
-               'ironio': {
-                 'TOKEN': 'xxxxxxxxx',
-                 'PROJECT_ID': yyyyyyyyyy',
-                 'MSG_EXPIRES': 1800,
-                 'MSG_TIMEOUT': 8400
-                },
-
-                'sqs': { 
-                 'TYPE': 'sqs',
-                 'AWS': {
-                         'AWS_ACCESS_KEY':'zzzzzz',
-                         'AWS_SECRET_KEY':'xxxxxx'
-                        }
-                } 
-      }
+{
+    "BASENAME": "my_queue",
+    "ENV_MODE": "dev",
+    "TYPE": "ironio",
+    "ironio": {
+        "TOKEN": "xxxxxxxxx",
+        "PROJECT_ID": "yyyyyyyyyy",
+        "MSG_EXPIRES": 1800,
+        "MSG_TIMEOUT": 8400
+    },
+    "sqs": {
+        "TYPE": "sqs",
+        "AWS": {
+            "AWS_ACCESS_KEY": "zzzzzz",
+            "AWS_SECRET_KEY": "xxxxxx"
+        }
+    }
+}
 ```
 **In configuration dictionary, be sure to specify:**
 * ENV_MODE (environment suffix used on name of queue).
