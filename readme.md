@@ -33,9 +33,15 @@ Create configuration json file (example):
     }
 }
 ```
-**In configuration dictionary, be sure to specify:**
-* ENV_MODE (environment suffix used on name of queue).
-* TYPE - the service to use (eg: 'sqs' for AWS SQS, 'ironio' for iron.io QS)
+**The name of the queue depends on two configuration variables**:
+
+1. BASENAME - name of queue 
+2. ENV_MODE - environment suffix used on naming of queue
+
+In this example, the full name of the queue would become my_queue_dev
+
+**Be sure to sepcify the TYPE**
+TYPE - the queue service to use (eg: 'sqs' for AWS SQS, 'ironio' for iron.io QS)
 
 ###Usage:
 ```python
