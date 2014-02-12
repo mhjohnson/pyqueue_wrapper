@@ -1,7 +1,11 @@
 # **pyqueue_wrapper documentation**
 
 # **Summary**
-This a wrapper that standardizes queue services for gevent, iron.IO and AWS (more to come)  
+This a wrapper that standardizes queue services for:  
+* gevent
+* [ironMQ](http://www.iron.io/mq)
+* [AWS SQS](http://aws.amazon.com/sqs/)
+* more to come ...  
 Sometimes there is a need to utilize multiple queue services, but refactoring code is not an option.
 With pyqueue_wrapper, one can easily switch between the supported queue services.
 
@@ -11,7 +15,7 @@ With pyqueue_wrapper, one can easily switch between the supported queue services
 pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
 ```
 
-## Create json config file**
+## **Create json config file**
 ### **Example:**
 ```javascript
 {
@@ -33,8 +37,8 @@ pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
     }
 }
 ```
-### **Config File Details**
-**The name of the queue depends on two configuration variables**:  
+### **Config File Details:**
+The name of the queue depends on two configuration variables:  
  1. **BASENAME** - name of queue 
  2. **ENV_MODE** - environment suffix used on naming of queue
 
