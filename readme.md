@@ -40,6 +40,7 @@ pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
 ```
 ### **Config File Details:**
 The *name* of the queue depends on *two* configuration variables:  
+
   1. **BASENAME** - name of queue 
   2. **ENV_MODE** - environment suffix used on naming of queue
 
