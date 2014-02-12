@@ -7,12 +7,13 @@ With pyqueue_wrapper, easily switch between the supported queue services.
 
 ## Setup Instructions
 ###Install
+```bash
 pip install https://bitbucket.org/imedicare/pyqueue_wrapper/get/master.zip
+```
 
 ###Setup
-Create configuration json file  
-    Example json configuration
-	```javascript
+Create configuration json file (example):
+```javascript
 	{
                'BASENAME': 'my_queue',
                'ENV_MODE': 'dev',
@@ -33,8 +34,8 @@ Create configuration json file
                         }
                 } 
       }
-	  ```
-In configuration dictionary, be sure to specify:
+```
+**In configuration dictionary, be sure to specify:**
 * ENV_MODE (environment suffix used on name of queue).
 * TYPE - the service to use (eg: 'sqs' for AWS SQS, 'ironio' for iron.io QS)
 
@@ -67,4 +68,3 @@ q.delete(qid) # Note: not required for AWS SQS, because auto deletes
 q.clear() # clear all messages in queue
 ```
 
-[/code]
